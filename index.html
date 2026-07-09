@@ -6,7 +6,7 @@
 <title>WPWS color palettes · mood boards · twelve palettes, six roles</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Karla:ital,wght@0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Archivo:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Karla:ital,wght@0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Archivo:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Parisienne&family=Sacramento&family=Alex+Brush&display=swap" rel="stylesheet">
 <style>
 :root{--page:#FBFAF7;--ink:#26241F;--muted:#6E6A61;--line:#E4E1D8;--card:#FFFFFF;
 --tag-new:#0F6E56;--tag-new-bg:#E1F5EE;--tag-swap:#854F0B;--tag-swap-bg:#FAEEDA;--tag-keep:#185FA5;--tag-keep-bg:#E6F1FB}
@@ -84,13 +84,30 @@ h2.sec{font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:52px 0
 .vibes span{font-size:12px;color:var(--muted)}
 footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 @media (max-width:640px){body{padding:36px 14px 60px}h1{font-size:28px}.map{grid-template-columns:1fr}.bname{font-size:32px}.board-body{padding:20px 18px}.photos,.tiles{grid-template-columns:1fr 1fr}.photos img,.tiles div{height:120px}}
+.pair-intro{font-size:14px;color:var(--muted);margin-bottom:22px;max-width:680px;line-height:1.6}
+.pairings-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;margin-bottom:22px}
+.pair-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+.pair-eyebrow{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.pair-name{font-size:22px;font-weight:600;margin-bottom:10px;line-height:1.15}
+.pair-body{font-size:13.5px;color:var(--muted);margin-bottom:6px;line-height:1.6}
+.pair-specimen{color:var(--ink);opacity:0.92}
+.pair-italic{font-size:12.5px;color:var(--muted);margin-bottom:12px;opacity:0.85}
+.pair-who{font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+.pair-note{font-size:13px;color:var(--muted);max-width:680px;margin-bottom:22px;line-height:1.6}
+.pair-accent{border-top:1px dashed var(--line);padding-top:12px;margin-top:12px;margin-bottom:12px}
+.pair-accent-label{font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;font-family:'Karla',sans-serif;font-weight:600}
+.pair-accent-name{font-size:26px;line-height:1;margin-bottom:10px;color:var(--ink);opacity:0.9}
+.pair-accent-specimen{margin:10px 0;line-height:1.1}
+.pair-accent-specimen .script{display:block;color:var(--ink);line-height:0.95;margin-bottom:1px;opacity:0.92;font-size:26px}
+.pair-accent-specimen .display{display:block;color:var(--ink);opacity:0.9}
+.pair-accent-note{font-size:11.5px;color:var(--muted);line-height:1.5;font-family:'Karla',sans-serif}
 </style>
 </head>
 <body>
 <div class="wrap">
 <p class="eyebrow">WPWS design system · mood boards · July 2026</p>
 <h1>Thirteen palettes, <em>six roles, four voices</em></h1>
-<p class="intro">Each palette now carries a vibe — a plain-language brand feel a client can recognize themselves in without any design vocabulary. Twelve palettes are mapped across two axes — warm to cool, soft to bold — three to a quadrant. Every palette runs on the same six-role anatomy (Base, Paper, Ink, Lead, Spice, Wash), so any layout built on the tokens accepts any palette. Each board is rendered in its own colors and set in its quadrant's proposed type pairing, so color and type are seen together for the first time. Every text pairing shown is WCAG-verified.</p>
+<p class="intro">Each palette now carries a vibe — a plain-language brand feel a client can recognize themselves in without any design vocabulary. Twelve palettes are mapped across two axes — warm to cool, soft to bold — three to a quadrant. Every palette runs on the same six-role anatomy (Base, Paper, Ink, Lead, Spice, Wash), so any layout built on the tokens accepts any palette. Each board is rendered in its own colors and set in its quadrant's default type pairing, but color and type are two independent choices — pairings can be swapped freely (see Type pairings at the end). Every text pairing shown is WCAG-verified.</p>
 
 <h2 class="sec">The spectrum</h2>
 <p class="sec-sub">Two questions place a client on the map: should it feel more energizing or more calming? Warmer or cooler? Their answers point at a quadrant, and they choose between its three palettes — never from a lineup of twelve. Each quadrant now offers a distinct personality within its temperature: no two palettes compete for the same client.</p>
@@ -128,7 +145,7 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 </div>
 <div class="axis"><span>↑ Bold above</span><span>Soft below ↓</span></div>
 
-<div class="type-note"><b>The typography layer.</b> Each quadrant carries a proposed Google Fonts pairing shown on its boards below — display for headlines, sans for body, with the display italic as the accent voice. All four pairings meet the sourcing criteria (Google Fonts only, true italics, tall x-height at 16px). <b>Pairings are proposals pending confirmation with Whitney</b>, not decisions: warm-soft <b>Fraunces + Karla</b>, warm-bold <b>DM Serif Display + Plus Jakarta Sans</b>, cool-soft <b>Lora + Work Sans</b>, cool-bold <b>Instrument Serif + Archivo</b>.</div>
+<div class="type-note"><b>Color and type are two independent dials.</b> Each palette is shown below in its quadrant's default pairing, but any of the four proposed Google Fonts pairings works with any of the thirteen palettes. Pick the type that matches the brand's voice, not the color it happens to sit next to on the map. The four pairings meet the sourcing criteria (Google Fonts, true italics, tall x-height at 16px) and are proposals pending Whitney's confirmation: warm-soft <b>Fraunces + Karla</b>, warm-bold <b>DM Serif Display + Plus Jakarta Sans</b>, cool-soft <b>Lora + Work Sans</b>, cool-bold <b>Instrument Serif + Archivo</b>. See <a href="#type-pairings">Type pairings</a> at the end of the doc for the specimens.</div>
 
 
 <h2 class="sec">Find your vibe</h2>
@@ -151,7 +168,7 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 
 <div class="quad-head"><h2>Warm and soft</h2></div>
 <p class="quad-meta">Caregiver · Innocent — nurturing, cozy, tender</p>
-<p class="pairing">Type pairing: <b>Fraunces</b> display · <b>Karla</b> body <span style="font-family:'Fraunces',serif;font-style:italic;">— the italic carries the accent voice</span></p>
+<p class="pairing">Shown in <b>Fraunces</b> + <b>Karla</b> <span style="font-family:'Fraunces',serif;font-style:italic;">— the italic carries the accent voice</span>. Any of the four <a href="#type-pairings">type pairings</a> works with any palette.</p>
 
 <div class="board" id="wisteria" style="background:#FEFBF5;color:#372F17;font-family:'Karla',sans-serif;">
 <div class="board-body">
@@ -161,11 +178,11 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 <p class="bwords" style="font-family:'Fraunces',serif;">romantic · <em style="color:#71597F;">sunlit</em> · dried-floral</p>
 <p class="bdesc">Cream, bronze, and a soft violet. Feels like a linen dress against a garden wall in late afternoon sun — nothing on the page shouts. For the practitioner who wants to feel established and warm at the same time.</p>
 <div class="photos">
-<img src="https://images.unsplash.com/photo-1560707854-fb9a10eeaace?q=80&w=900&auto=format&fit=crop" alt="Smiling woman carrying a baby">
-<img src="https://images.unsplash.com/photo-1583710457367-47de0ea21fef?q=80&w=900&auto=format&fit=crop" alt="Woman in white shirt carrying a baby in soft light">
-<img src="https://images.unsplash.com/photo-1489760176169-fd3d32805239?q=80&w=900&auto=format&fit=crop" alt="Infant feet held gently in a woman's hands">
+<img src="https://images.unsplash.com/photo-1619922141822-8972ce55b44b?q=80&w=900&auto=format&fit=crop" alt="Purple wisteria blooms on a weathered wooden fence">
+<img src="https://images.unsplash.com/photo-1654028829490-af9c5b060429?q=80&w=900&auto=format&fit=crop" alt="Pathway lined with hanging wisteria in bloom">
+<img src="https://images.unsplash.com/photo-1629563293404-f7ff059421e2?q=80&w=900&auto=format&fit=crop" alt="Close-up of wisteria flowers in soft focus">
 </div>
-<p class="photo-note">Photography direction: golden-hour warmth, dried florals and linen, gentle hands, cream backdrops.</p>
+<p class="photo-note">Photography direction: wisteria and dried florals, linen and stone, garden walls in late-afternoon sun, cream backdrops.</p>
 <p class="hexline">#FEFBF5 · #FAF2E6 · #372F17 · #61562E · #71597F · #E0D3E6</p>
 <div class="roles">
 <div class="role-card"><div class="chip" style="background:#FEFBF5;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm White</p><p class="rhex">#FEFBF5</p><p class="ruse">Primary background, ~80% of the site.</p><p class="rtok">--base / --bg</p></div></div>
@@ -193,12 +210,12 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 <p class="bvibe" style="color:#2E7C93;">Cheerful & Approachable</p>
 <p class="bwords" style="font-family:'Fraunces',serif;">fresh · <em style="color:#2E7C93;">gentle</em> · optimistic</p>
 <p class="bdesc">Rose, lime, and powder blue with a raspberry spine. Feels like the waiting room kids don't mind — a picture-book palette that still signs its name like an adult. The two-audience palette: playful enough for the child in the room, credible enough for the parent writing the check. Made for children's nutrition, speech therapy, family care, and early education. Of the three fresh palettes, this is the gentlest.</p>
-<div class="tiles">
-<div style="background:linear-gradient(160deg,#DB8389 0%,#F8D6DA 100%);"></div>
-<div style="background:linear-gradient(160deg,#DFFDBB 0%,#A5CFDA 100%);"></div>
-<div style="background:linear-gradient(160deg,#A5CFDA 0%,#FDFAF6 100%);"></div>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1560707854-fb9a10eeaace?q=80&w=900&auto=format&fit=crop" alt="Parent smiling with a small child in soft daylight">
+<img src="https://images.unsplash.com/photo-1583710457367-47de0ea21fef?q=80&w=900&auto=format&fit=crop" alt="Parent in a linen shirt holding a baby in soft light">
+<img src="https://images.unsplash.com/photo-1489760176169-fd3d32805239?q=80&w=900&auto=format&fit=crop" alt="A parent's hands gently holding a baby's feet">
 </div>
-<p class="photo-note">Photos to be sourced. Direction: soft daylight, garden greens, pastel textiles, fresh produce close-ups, open sky.</p>
+<p class="photo-note">Photography direction: soft daylight, families and children, linen and cotton, warm hands, garden greens.</p>
 <p class="hexline">#FDFAF6 · #A5CFDA · #3B3134 · #A94850 · #2E7C93 · #DFFDBB</p>
 <div class="roles">
 <div class="role-card"><div class="chip" style="background:#FDFAF6;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm White</p><p class="rhex">#FDFAF6</p><p class="ruse">Primary background, rose-warmed.</p><p class="rtok">--base / --bg</p></div></div>
@@ -254,7 +271,7 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 
 <div class="quad-head"><h2>Warm and bold</h2></div>
 <p class="quad-meta">Hero · Everyman — energizing, grounded, direct</p>
-<p class="pairing">Type pairing: <b>DM Serif Display</b> display · <b>Plus Jakarta Sans</b> body <span style="font-family:'DM Serif Display',serif;font-style:italic;">— the italic carries the accent voice</span></p>
+<p class="pairing">Shown in <b>DM Serif Display</b> + <b>Plus Jakarta Sans</b> <span style="font-family:'DM Serif Display',serif;font-style:italic;">— the italic carries the accent voice</span>. Any of the four <a href="#type-pairings">type pairings</a> works with any palette.</p>
 
 <div class="board" id="farmstand" style="background:#FDFAF2;color:#1B3A2C;font-family:'Plus Jakarta Sans',sans-serif;">
 <div class="board-body">
@@ -329,12 +346,12 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 <p class="bvibe" style="color:#F95B36;">Energetic & Playful</p>
 <p class="bwords" style="font-family:'DM Serif Display',serif;">spirited · <em style="color:#F95B36;">social</em> · fresh</p>
 <p class="bdesc">A teal court, a lime ball, a coral kit. Feels like Tuesday-night league with friends — competitive, social, laughing between points. Made for brands that sweat: fitness, health coaching, meal prep, sports nutrition — energy without the gym-bro intensity. Of the three fresh palettes, this is the loudest.</p>
-<div class="tiles">
-<div style="background:linear-gradient(160deg,#3FA48D 0%,#D3E7A2 100%);"></div>
-<div style="background:linear-gradient(160deg,#F95B36 0%,#FDD3C4 100%);"></div>
-<div style="background:linear-gradient(160deg,#D3E7A2 0%,#E7F4EE 100%);"></div>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1693142518820-78d7a05f1546?q=80&w=900&auto=format&fit=crop" alt="Two paddles and pickleballs on a teal court">
+<img src="https://images.unsplash.com/photo-1515017804404-92b19fdfe6ac?q=80&w=900&auto=format&fit=crop" alt="Aerial view of two players on an outdoor court">
+<img src="https://images.unsplash.com/photo-1686721135030-e2ab79e27b16?q=80&w=900&auto=format&fit=crop" alt="Three pickleballs on the court near a net">
 </div>
-<p class="photo-note">Photos to be sourced. Direction: courts and kits, motion blur, water bottles and meal prep, hard sunlight, saturated greens.</p>
+<p class="photo-note">Photography direction: courts and kits, paddles and balls, motion blur, hard sunlight, saturated greens.</p>
 <p class="hexline">#FEFDF4 · #E7F4EE · #173931 · #3FA48D · #F95B36 · #D3E7A2</p>
 <div class="roles">
 <div class="role-card"><div class="chip" style="background:#FEFDF4;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Ivory</p><p class="rhex">#FEFDF4</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
@@ -357,7 +374,7 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 
 <div class="quad-head"><h2>Cool and soft</h2></div>
 <p class="quad-meta">Sage — calm, credible, considered</p>
-<p class="pairing">Type pairing: <b>Lora</b> display · <b>Work Sans</b> body <span style="font-family:'Lora',serif;font-style:italic;">— the italic carries the accent voice</span></p>
+<p class="pairing">Shown in <b>Lora</b> + <b>Work Sans</b> <span style="font-family:'Lora',serif;font-style:italic;">— the italic carries the accent voice</span>. Any of the four <a href="#type-pairings">type pairings</a> works with any palette.</p>
 
 <div class="board" id="calm" style="background:#FAF7F0;color:#20394F;font-family:'Work Sans',sans-serif;">
 <div class="board-body">
@@ -399,12 +416,12 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 <p class="bvibe" style="color:#A34D5E;">Botanical & Intentional</p>
 <p class="bwords" style="font-family:'Lora',serif;">herbal · <em style="color:#A34D5E;">grounded</em> · quiet</p>
 <p class="bdesc">Moss, berry, and soft blush. Feels like an herbalist's studio where every jar is labeled by hand. For the practitioner whose approach is natural and unhurried, with real rigor underneath.</p>
-<div class="tiles">
-<div style="background:linear-gradient(160deg,#66734E 0%,#EBEDE4 100%);"></div>
-<div style="background:linear-gradient(160deg,#A34D5E 0%,#F6E0E4 100%);"></div>
-<div style="background:linear-gradient(160deg,#EBEDE4 0%,#FCFCF7 100%);"></div>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1478744919174-118dbd24973e?q=80&w=900&auto=format&fit=crop" alt="Clear glass apothecary jars lined up on a shelf">
+<img src="https://images.unsplash.com/photo-1550159793-871f0c58e882?q=80&w=900&auto=format&fit=crop" alt="Amber glass bottles on a soft white surface">
+<img src="https://images.unsplash.com/photo-1483137140003-ae073b395549?q=80&w=900&auto=format&fit=crop" alt="Fresh herbs beside a ceramic bowl in soft light">
 </div>
-<p class="photo-note">Photos to be sourced. Direction: herb gardens, foraged berries, linen textures, overcast soft light, apothecary calm.</p>
+<p class="photo-note">Photography direction: apothecary jars, foraged herbs, ceramic and linen, overcast soft light, hand labels.</p>
 <p class="hexline">#FCFCF7 · #EBEDE4 · #33352A · #66734E · #A34D5E · #F6E0E4</p>
 <div class="roles">
 <div class="role-card"><div class="chip" style="background:#FCFCF7;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Green White</p><p class="rhex">#FCFCF7</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
@@ -432,11 +449,12 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 <p class="bvibe" style="color:#616A4D;">Soft & Thoughtful</p>
 <p class="bwords" style="font-family:'Lora',serif;">romantic · <em style="color:#616A4D;">graceful</em> · lavender-field</p>
 <p class="bdesc">Lavender, limestone, and gray-green herbs. Feels like a slow morning in the south of France — calm, a little romantic, with room to breathe. For the practitioner whose clients need gentleness first and a plan second.</p>
-<div class="photos two">
-<img src="https://images.unsplash.com/photo-1688832331997-0331b0ccffd0?q=80&w=900&auto=format&fit=crop" alt="Woman standing in a field of lavender">
-<img src="https://images.unsplash.com/photo-1761194466962-52d338187614?q=80&w=900&auto=format&fit=crop" alt="Woman in white dress walking through a lavender field">
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1688832331997-0331b0ccffd0?q=80&w=900&auto=format&fit=crop" alt="A figure standing in a field of lavender at soft light">
+<img src="https://images.unsplash.com/photo-1761194466962-52d338187614?q=80&w=900&auto=format&fit=crop" alt="A figure in white walking through a lavender field">
+<img src="https://images.unsplash.com/photo-1499002238440-d264edd596ec?q=80&w=900&auto=format&fit=crop" alt="Rows of lavender stretching to the horizon">
 </div>
-<p class="photo-note">Photography direction: lavender rows, limestone, gray-green foliage, cool morning light. One more photo to source.</p>
+<p class="photo-note">Photography direction: lavender rows, limestone, gray-green foliage, cool morning light.</p>
 <p class="hexline">#F9F8F9 · #EEEEE9 · #221F24 · #675370 · #616A4D · #E0D5E6</p>
 <div class="roles">
 <div class="role-card"><div class="chip" style="background:#F9F8F9;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Cool White</p><p class="rhex">#F9F8F9</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
@@ -459,7 +477,7 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 
 <div class="quad-head"><h2>Cool and bold</h2></div>
 <p class="quad-meta">Creator — crisp, confident, editorial</p>
-<p class="pairing">Type pairing: <b>Instrument Serif</b> display · <b>Archivo</b> body <span style="font-family:'Instrument Serif',serif;font-style:italic;">— the italic carries the accent voice</span></p>
+<p class="pairing">Shown in <b>Instrument Serif</b> + <b>Archivo</b> <span style="font-family:'Instrument Serif',serif;font-style:italic;">— the italic carries the accent voice</span>. Any of the four <a href="#type-pairings">type pairings</a> works with any palette.</p>
 
 <div class="board" id="watermelon" style="background:#FAFCFA;color:#053641;font-family:'Archivo',sans-serif;">
 <div class="board-body">
@@ -534,12 +552,12 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 <p class="bvibe" style="color:#C74A24;">Clean & Confident</p>
 <p class="bwords" style="font-family:'Instrument Serif',serif;">midnight water · <em style="color:#C74A24;">icy sky</em> · painted boathouses</p>
 <p class="bdesc">Indigo, icy blue, and one hot stroke of persimmon. Feels like cold air and clear thinking. For the practitioner who leads with expertise and wants a site that gets straight to the point.</p>
-<div class="tiles">
-<div style="background:linear-gradient(160deg,#1E2A44 0%,#354C97 100%);"></div>
-<div style="background:linear-gradient(160deg,#BCCEDA 0%,#DCEBF3 100%);"></div>
-<div style="background:linear-gradient(160deg,#D9532B 0%,#F4C4AE 100%);"></div>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1698307781486-7c63dadf5fb7?q=80&w=900&auto=format&fit=crop" alt="Deep slate water surrounded by tall mountains">
+<img src="https://images.unsplash.com/photo-1547683331-a03843cf94dd?q=80&w=900&auto=format&fit=crop" alt="A single bird above a calm lake under overcast sky">
+<img src="https://images.unsplash.com/photo-1504233529578-6d46baba6d34?q=80&w=900&auto=format&fit=crop" alt="A red-and-white wooden house on the edge of a fjord">
 </div>
-<p class="photo-note">Photos to be sourced. Direction: coastlines at dusk, midnight-blue water, nordic interiors, editorial portraits in cool light, one warm painted accent.</p>
+<p class="photo-note">Photography direction: cold water and mountains, nordic architecture, editorial portraits in cool light, one warm painted accent.</p>
 <p class="hexline">#FCFBF6 · #BCCEDA · #1E2A44 · #354C97 · #D9532B · #DCEBF3</p>
 <div class="roles">
 <div class="role-card"><div class="chip" style="background:#FCFBF6;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Soft White</p><p class="rhex">#FCFBF6</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
@@ -563,7 +581,7 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 
 <div class="quad-head"><h2>Off the map</h2></div>
 <p class="quad-meta">Temperature-neutral by design — the thirteenth option, outside the quadrant grid</p>
-<p class="pairing">Type pairing: <b>any of the four</b> — with no color doing the talking, typography becomes the personality. Shown here in Fraunces + Karla.</p>
+<p class="pairing">Type pairing: <b>any of the four</b> — with no color doing the talking, typography becomes the personality. Shown here in Fraunces + Karla. See <a href="#type-pairings">Type pairings</a> below.</p>
 
 <div class="board" id="gallery" style="background:#FBFAF8;color:#232019;font-family:'Karla',sans-serif;">
 <div class="board-body">
@@ -572,12 +590,12 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 <p class="bvibe" style="color:#4E565C;">Simple &amp; Refined</p>
 <p class="bwords" style="font-family:'Fraunces',serif;">quiet · <em style="color:#4E565C;">precise</em> · gallery-white</p>
 <p class="bdesc">Warm white, stone, and graphite black. Feels like a gallery with your work on the walls — the site disappears and the work does the talking. For the practitioner who finds every color too much, whose photography or words carry the brand, and who wants minimal without feeling unfinished.</p>
-<div class="tiles">
-<div style="background:linear-gradient(160deg,#232019 0%,#4A443C 100%);"></div>
-<div style="background:linear-gradient(160deg,#F1F0EC 0%,#FBFAF8 100%);"></div>
-<div style="background:linear-gradient(160deg,#4E565C 0%,#ECE8E0 100%);"></div>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1535385793343-27dff1413c5a?q=80&w=900&auto=format&fit=crop" alt="A quiet room with a wooden table and white walls">
+<img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=900&auto=format&fit=crop" alt="A neutral interior with a large window and soft light">
+<img src="https://images.unsplash.com/photo-1543487945-139a97f387d5?q=80&w=900&auto=format&fit=crop" alt="A framed typographic poster above a low sofa">
 </div>
-<p class="photo-note">Photos to be sourced. Direction: white walls, museum light, linen and paper textures, strong typography — the client's own imagery supplies all the color.</p>
+<p class="photo-note">Photography direction: white walls, museum light, linen and paper textures, strong typography. The client's own imagery supplies all the color.</p>
 <p class="hexline">#FBFAF8 · #F1F0EC · #232019 · #4A443C · #4E565C · #ECE8E0</p>
 <div class="roles">
 <div class="role-card"><div class="chip" style="background:#FBFAF8;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm White</p><p class="rhex">#FBFAF8</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
@@ -628,8 +646,89 @@ footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
 </div>
 </div>
 
+
+<h2 class="sec" id="type-pairings">Type pairings</h2>
+<p class="sec-sub">Color and typography are two independent dials. Each palette above was shown in its quadrant's default pairing, but any of the four pairings works with any of the thirteen palettes. Pick the one that sounds like the brand's voice, not the color it happens to sit next to on the map. Each pairing also carries a matched accent script, chosen to belong to that pairing's register — an optional signature layer for eyebrows, category labels, and closings, always used sparingly.</p>
+<p class="pair-intro">Every pairing is a display serif for headlines with a sans-serif workhorse for body, and every display face has a true italic that carries the accent voice. All four are Google Fonts. Pairings are proposals pending Whitney's confirmation.</p>
+<div class="pairings-grid">
+
+<div class="pair-card" style="font-family:'Karla',sans-serif;">
+<p class="pair-eyebrow">Warm-soft default</p>
+<p class="pair-name" style="font-family:'Fraunces',serif;">Fraunces + Karla</p>
+<p class="pair-body">A high-contrast serif with a rounded italic, paired with a friendly humanist sans. Reads editorial with warmth — the voice of a practice that's been around long enough to have opinions.</p>
+<p class="pair-specimen" style="font-family:'Fraunces',serif;font-size:30px;line-height:1.1;margin:14px 0 4px;">Your work, <em style="font-style:italic;">quietly established</em>.</p>
+<p class="pair-italic" style="font-family:'Fraunces',serif;">The italic carries the accent voice — used sparingly, once or twice per section.</p>
+<div class="pair-accent">
+<p class="pair-accent-label">Accent script</p>
+<p class="pair-accent-name" style="font-family:'Great Vibes',cursive;">Great Vibes</p>
+<p class="pair-accent-specimen">
+<span class="script" style="font-family:'Great Vibes',cursive;">the podcast</span>
+<span class="display" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;">Marketing Field Notes</span>
+</p>
+<p class="pair-accent-note">Copperplate warmth. Fits eyebrows, category labels, and signatures. Alt: Petit Formal Script for a narrower engraved-invitation feel.</p>
+</div>
+<p class="pair-who">Suits warm caregivers, established boutique practices, editorial voices.</p>
+</div>
+
+<div class="pair-card" style="font-family:'Plus Jakarta Sans',sans-serif;">
+<p class="pair-eyebrow">Warm-bold default</p>
+<p class="pair-name" style="font-family:'DM Serif Display',serif;">DM Serif Display + Plus Jakarta Sans</p>
+<p class="pair-body">A tall, high-contrast display serif over a modern geometric sans. Feels confident and current — the voice of someone who owns the room without raising it.</p>
+<p class="pair-specimen" style="font-family:'DM Serif Display',serif;font-size:32px;line-height:1.05;margin:14px 0 4px;">The offer, <em style="font-style:italic;">and the proof</em>.</p>
+<p class="pair-italic" style="font-family:'DM Serif Display',serif;">The italic carries the accent voice — high visual weight, used only in display sizes.</p>
+<div class="pair-accent">
+<p class="pair-accent-label">Accent script</p>
+<p class="pair-accent-name" style="font-family:'Parisienne',cursive;">Parisienne</p>
+<p class="pair-accent-specimen">
+<span class="script" style="font-family:'Parisienne',cursive;">chapter one</span>
+<span class="display" style="font-family:'DM Serif Display',serif;font-size:24px;">Where it starts.</span>
+</p>
+<p class="pair-accent-note">French connected script with real drama. Keeps up with DM Serif Display's contrast at display sizes. Alt: Allura for a slightly more classic wedding-scale feel.</p>
+</div>
+<p class="pair-who">Suits expert voices, high-conviction offers, results-led brands.</p>
+</div>
+
+<div class="pair-card" style="font-family:'Work Sans',sans-serif;">
+<p class="pair-eyebrow">Cool-soft default</p>
+<p class="pair-name" style="font-family:'Lora',serif;">Lora + Work Sans</p>
+<p class="pair-body">A calm bookish serif with a neutral workhorse sans. Considered and unhurried — the voice of a practitioner whose clients slow down to read.</p>
+<p class="pair-specimen" style="font-family:'Lora',serif;font-size:28px;line-height:1.15;margin:14px 0 4px;">The long story, <em style="font-style:italic;">told plainly</em>.</p>
+<p class="pair-italic" style="font-family:'Lora',serif;">The italic carries the accent voice — soft and unshowy, well-suited to long-form.</p>
+<div class="pair-accent">
+<p class="pair-accent-label">Accent script</p>
+<p class="pair-accent-name" style="font-family:'Sacramento',cursive;">Sacramento</p>
+<p class="pair-accent-specimen">
+<span class="script" style="font-family:'Sacramento',cursive;">a note from</span>
+<span class="display" style="font-family:'Lora',serif;font-size:22px;font-weight:600;">Whitney</span>
+</p>
+<p class="pair-accent-note">Quiet brush script. Reads like handwriting in a good notebook. Alt: Caveat for pen-based handwriting with more casual energy.</p>
+</div>
+<p class="pair-who">Suits sages, therapists, herbalists, long-form storytellers.</p>
+</div>
+
+<div class="pair-card" style="font-family:'Archivo',sans-serif;">
+<p class="pair-eyebrow">Cool-bold default</p>
+<p class="pair-name" style="font-family:'Instrument Serif',serif;">Instrument Serif + Archivo</p>
+<p class="pair-body">A modernist high-contrast serif with a technical grotesque sans. Crisp and precise — the voice of an expert who won't waste your time.</p>
+<p class="pair-specimen" style="font-family:'Instrument Serif',serif;font-size:34px;line-height:1.05;margin:14px 0 4px;">Straight to the <em style="font-style:italic;">point</em>.</p>
+<p class="pair-italic" style="font-family:'Instrument Serif',serif;">The italic carries the accent voice — sharp and editorial, works at display and inline sizes.</p>
+<div class="pair-accent">
+<p class="pair-accent-label">Accent script</p>
+<p class="pair-accent-name" style="font-family:'Alex Brush',cursive;">Alex Brush</p>
+<p class="pair-accent-specimen">
+<span class="script" style="font-family:'Alex Brush',cursive;font-size:30px;">hello,</span>
+<span class="display" style="font-family:'Instrument Serif',serif;font-size:26px;">I'm the expert.</span>
+</p>
+<p class="pair-accent-note">Contemporary brush with weight. Warms the crisp cool pairing on purpose. Alt: Yellowtail for a 1970s revival feel.</p>
+</div>
+<p class="pair-who">Suits creators, editorial brands, clarity-first experts.</p>
+</div>
+
+</div>
+<p class="pair-note">Any pairing works with any palette. Wisteria in Archivo reads quieter and more modernist; Watermelon in Fraunces reads warmer and more editorial; Gallery accepts any of the four, which is why it lives off the map. Each pairing's accent script is matched to that pairing's register: copperplate warmth for Fraunces, French drama for DM Serif Display, considered brush for Lora, contemporary brush weight for Instrument Serif. Use them sparingly — one word or one short line, at display sizes only, kept out of body copy and buttons. The defaults above are starting points, not the only right answers.</p>
+
 <footer>
-<p>Thirteen palettes (twelve on the map, Gallery off it), each with a client-facing vibe label, six roles, and four proposed type pairings. "Vibe" is used for this layer to keep "personality" reserved for the independent site-personality dial. Photos hotlinked from Unsplash under the Unsplash License; gradient tiles mark the four palettes whose photography is still to be sourced. Type pairings are proposals pending confirmation. Companion documents: wpws-twelve-palettes.html (full reference) and wpws-palette-comparison.html (original vs updated lineage). Ultraviolet (violet and lime, verified) is held in reserve as a possible premium expression. Expansion bench for a future sixteen: no further greens — the band is full — candidates are rust + navy, charcoal + dusty coral, aubergine + copper.</p>
+<p>Thirteen palettes (twelve on the map, Gallery off it), each with a client-facing vibe label and six roles, plus four independent type pairings that work with any palette. "Vibe" is used for this layer to keep "personality" reserved for the site-personality dial. Photos hotlinked from Unsplash under the Unsplash License. Type pairings are proposals pending Whitney's confirmation. Companion documents: wpws-twelve-palettes.html (full reference) and wpws-palette-comparison.html (original vs updated lineage). Ultraviolet (violet and lime, verified) is held in reserve as a possible premium expression. Expansion bench for a future sixteen: no further greens — the band is full — candidates are rust + navy, charcoal + dusty coral, aubergine + copper.</p>
 </footer>
 </div>
 </body>
