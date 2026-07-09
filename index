@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WPWS color palettes · mood boards · twelve palettes, six roles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Karla:ital,wght@0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Archivo:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--page:#FBFAF7;--ink:#26241F;--muted:#6E6A61;--line:#E4E1D8;--card:#FFFFFF;
+--tag-new:#0F6E56;--tag-new-bg:#E1F5EE;--tag-swap:#854F0B;--tag-swap-bg:#FAEEDA;--tag-keep:#185FA5;--tag-keep-bg:#E6F1FB}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--page);color:var(--ink);font-family:'Karla',sans-serif;font-size:15px;line-height:1.6;padding:56px 24px 80px}
+.wrap{max-width:1080px;margin:0 auto}
+.eyebrow{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:36px;line-height:1.12;margin-bottom:12px}
+h1 em{font-style:italic;font-weight:400}
+.intro{max-width:680px;color:var(--muted);margin-bottom:44px}
+h2.sec{font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:52px 0 8px;padding-top:30px;border-top:1px solid var(--line)}
+.sec-sub{font-size:13.5px;color:var(--muted);margin-bottom:22px;max-width:680px}
+.map{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.quad{background:var(--card);padding:22px 24px}
+.quad h3{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.quad .arch{font-size:12px;color:var(--muted);margin-bottom:14px}
+.mini{margin-bottom:12px}
+.mini p{font-size:13.5px;font-weight:600;margin-bottom:3px}
+.mini .strip{display:flex;gap:2px}
+.mini .strip span{flex:1;height:16px;border-radius:2px}
+.axis{display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin:8px 4px}
+.type-note{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin:22px 0 0;font-size:13.5px;color:var(--muted)}
+.type-note b{color:var(--ink)}
+.quad-head{margin:52px 0 4px;padding-top:30px;border-top:1px solid var(--line)}
+.quad-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:24px}
+.quad-meta{font-size:13.5px;color:var(--muted);margin-bottom:4px}
+.pairing{font-size:13.5px;color:var(--muted);margin-bottom:24px}
+.pairing b{color:var(--ink)}
+.board{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:26px}
+.board-body{padding:30px 32px}
+.blabel{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.75;margin-bottom:8px}
+.bname{font-size:42px;line-height:1.05;margin-bottom:4px}
+.bwords{font-size:17px;margin-bottom:20px;opacity:0.92}
+.tag{font-size:9.5px;letter-spacing:0.09em;text-transform:uppercase;font-weight:600;padding:3px 9px;border-radius:99px;margin-left:10px;vertical-align:4px;font-family:'Karla',sans-serif}
+.tag.new{color:var(--tag-new);background:var(--tag-new-bg)}
+.tag.swap{color:var(--tag-swap);background:var(--tag-swap-bg)}
+.tag.keep{color:var(--tag-keep);background:var(--tag-keep-bg)}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.photos img{width:100%;height:170px;object-fit:cover;border-radius:8px;display:block}
+.photos.two{grid-template-columns:repeat(2,1fr)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.tiles div{height:170px;border-radius:8px}
+.photo-note{font-size:12px;opacity:0.7;margin-bottom:20px}
+.hexline{font-size:12.5px;font-family:ui-monospace,Menlo,monospace;opacity:0.8;margin-bottom:22px}
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:20px}
+.role-card{border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);background:rgba(255,255,255,0.55)}
+.role-card .chip{height:44px}
+.role-card .rmeta{padding:9px 11px}
+.role-card .rname{font-size:12.5px;font-weight:600;font-family:'Karla',sans-serif}
+.role-card .rhex{font-size:11.5px;font-family:ui-monospace,Menlo,monospace;opacity:0.75}
+.role-card .ruse{font-size:11.5px;opacity:0.8;margin-top:3px;line-height:1.45;font-family:'Karla',sans-serif}
+.role-card .rtok{font-size:10.5px;font-family:ui-monospace,Menlo,monospace;opacity:0.6;margin-top:3px}
+.bpairs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.bpair{font-size:12px;padding:5px 11px;border-radius:6px;border:1px solid rgba(0,0,0,0.1);font-family:'Karla',sans-serif}
+.bnote{font-size:13px;opacity:0.85;border-top:1px dashed rgba(0,0,0,0.15);padding-top:12px;font-family:'Karla',sans-serif}
+.bnote b{font-weight:600}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.rule{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.rule h4{font-size:14px;font-weight:600;margin-bottom:6px}
+.rule p{font-size:13px;color:var(--muted)}
+.dodont{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:12px}
+.dd{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.dd h4{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px}
+.dd.do h4{color:var(--tag-new)}
+.dd.dont h4{color:#A32D2D}
+.dd p{font-size:13px;color:var(--muted);padding-left:18px;position:relative;margin-bottom:7px}
+.dd.do p::before{content:'✓';position:absolute;left:0;color:var(--tag-new)}
+.dd.dont p::before{content:'✕';position:absolute;left:0;color:#A32D2D}
+.bvibe{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;opacity:0.75;margin:2px 0 8px}
+.bdesc{font-size:14.5px;line-height:1.65;max-width:660px;margin:-8px 0 20px;opacity:0.92}
+.vibes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:9px;margin-top:22px}
+.vibes a{display:block;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:12px 15px;text-decoration:none;color:var(--ink)}
+.vibes a:hover{border-color:#C9C4B4}
+.vibes b{display:block;font-size:13.5px}
+.vibes span{font-size:12px;color:var(--muted)}
+footer{margin-top:52px;font-size:12.5px;color:var(--muted);max-width:680px}
+@media (max-width:640px){body{padding:36px 14px 60px}h1{font-size:28px}.map{grid-template-columns:1fr}.bname{font-size:32px}.board-body{padding:20px 18px}.photos,.tiles{grid-template-columns:1fr 1fr}.photos img,.tiles div{height:120px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="eyebrow">WPWS design system · mood boards · July 2026</p>
+<h1>Thirteen palettes, <em>six roles, four voices</em></h1>
+<p class="intro">Each palette now carries a vibe — a plain-language brand feel a client can recognize themselves in without any design vocabulary. Twelve palettes are mapped across two axes — warm to cool, soft to bold — three to a quadrant. Every palette runs on the same six-role anatomy (Base, Paper, Ink, Lead, Spice, Wash), so any layout built on the tokens accepts any palette. Each board is rendered in its own colors and set in its quadrant's proposed type pairing, so color and type are seen together for the first time. Every text pairing shown is WCAG-verified.</p>
+
+<h2 class="sec">The spectrum</h2>
+<p class="sec-sub">Two questions place a client on the map: should it feel more energizing or more calming? Warmer or cooler? Their answers point at a quadrant, and they choose between its three palettes — never from a lineup of twelve. Each quadrant now offers a distinct personality within its temperature: no two palettes compete for the same client.</p>
+
+<div class="axis"><span>← Warm</span><span>Cool →</span></div>
+<div class="map">
+<div class="quad">
+<h3>Warm · Bold</h3>
+<p class="arch">Hero · Everyman — energizing, grounded</p>
+<div class="mini"><p>Farmstand</p><div class="strip"><span style="background:#1B3A2C"></span><span style="background:#965C08"></span><span style="background:#853F65"></span><span style="background:#F4ECC0"></span><span style="background:#F2E4EC"></span><span style="background:#FDFAF2"></span></div></div>
+<div class="mini"><p>Vibrant</p><div class="strip"><span style="background:#212F58"></span><span style="background:#BD3B2E"></span><span style="background:#2C5BAB"></span><span style="background:#FBE4B8"></span><span style="background:#FBE4DD"></span><span style="background:#FEF7EF"></span></div></div>
+<div class="mini"><p>Pickleball</p><div class="strip"><span style="background:#173931"></span><span style="background:#3FA48D"></span><span style="background:#F95B36"></span><span style="background:#D3E7A2"></span><span style="background:#E7F4EE"></span><span style="background:#FEFDF4"></span></div></div>
+</div>
+<div class="quad">
+<h3>Cool · Bold</h3>
+<p class="arch">Creator — crisp, confident</p>
+<div class="mini"><p>Watermelon</p><div class="strip"><span style="background:#053641"></span><span style="background:#26776A"></span><span style="background:#CE3E59"></span><span style="background:#FADEE3"></span><span style="background:#D4F2E8"></span><span style="background:#FAFCFA"></span></div></div>
+<div class="mini"><p>Luxe</p><div class="strip"><span style="background:#2C2238"></span><span style="background:#5D3A63"></span><span style="background:#C9A227"></span><span style="background:#E3D7EC"></span><span style="background:#EFE9F3"></span><span style="background:#FAF8F4"></span></div></div>
+<div class="mini"><p>Fjord</p><div class="strip"><span style="background:#1E2A44"></span><span style="background:#354C97"></span><span style="background:#D9532B"></span><span style="background:#DCEBF3"></span><span style="background:#BCCEDA"></span><span style="background:#FCFBF6"></span></div></div>
+</div>
+<div class="quad">
+<h3>Warm · Soft</h3>
+<p class="arch">Caregiver · Innocent — nurturing, cozy</p>
+<div class="mini"><p>Wisteria</p><div class="strip"><span style="background:#372F17"></span><span style="background:#61562E"></span><span style="background:#71597F"></span><span style="background:#E0D3E6"></span><span style="background:#FAF2E6"></span><span style="background:#FEFBF5"></span></div></div>
+<div class="mini"><p>Sweet Pea</p><div class="strip"><span style="background:#3B3134"></span><span style="background:#A94850"></span><span style="background:#2E7C93"></span><span style="background:#DFFDBB"></span><span style="background:#A5CFDA"></span><span style="background:#FDFAF6"></span></div></div>
+<div class="mini"><p>Riad</p><div class="strip"><span style="background:#22302E"></span><span style="background:#14565B"></span><span style="background:#B56E4C"></span><span style="background:#EFD7C2"></span><span style="background:#EAF5EF"></span><span style="background:#FEFCF9"></span></div></div>
+</div>
+<div class="quad">
+<h3>Cool · Soft</h3>
+<p class="arch">Sage — calm, credible</p>
+<div class="mini"><p>Calm</p><div class="strip"><span style="background:#20394F"></span><span style="background:#3B688A"></span><span style="background:#C0763B"></span><span style="background:#F6E3CE"></span><span style="background:#DCE8EC"></span><span style="background:#FAF7F0"></span></div></div>
+<div class="mini"><p>Elderberry</p><div class="strip"><span style="background:#33352A"></span><span style="background:#66734E"></span><span style="background:#A34D5E"></span><span style="background:#F6E0E4"></span><span style="background:#EBEDE4"></span><span style="background:#FCFCF7"></span></div></div>
+<div class="mini"><p>Provence</p><div class="strip"><span style="background:#221F24"></span><span style="background:#675370"></span><span style="background:#616A4D"></span><span style="background:#E0D5E6"></span><span style="background:#EEEEE9"></span><span style="background:#F9F8F9"></span></div></div>
+</div>
+</div>
+<div class="axis"><span>↑ Bold above</span><span>Soft below ↓</span></div>
+
+<div class="type-note"><b>The typography layer.</b> Each quadrant carries a proposed Google Fonts pairing shown on its boards below — display for headlines, sans for body, with the display italic as the accent voice. All four pairings meet the sourcing criteria (Google Fonts only, true italics, tall x-height at 16px). <b>Pairings are proposals pending confirmation with Whitney</b>, not decisions: warm-soft <b>Fraunces + Karla</b>, warm-bold <b>DM Serif Display + Plus Jakarta Sans</b>, cool-soft <b>Lora + Work Sans</b>, cool-bold <b>Instrument Serif + Archivo</b>.</div>
+
+
+<h2 class="sec">Find your vibe</h2>
+<p class="sec-sub">No brand vocabulary needed — pick the phrase that sounds like how you want clients to see you. Each one maps to exactly one palette.</p>
+<div class="vibes">
+<a href="#provence"><b>Soft &amp; Thoughtful</b><span>Provence</span></a>
+<a href="#wisteria"><b>Quiet Luxury</b><span>Wisteria</span></a>
+<a href="#riad"><b>Grounded Confidence</b><span>Riad</span></a>
+<a href="#farmstand"><b>Warm &amp; Vibrant</b><span>Farmstand</span></a>
+<a href="#calm"><b>Professional &amp; Trusted</b><span>Calm</span></a>
+<a href="#luxe"><b>Elevated &amp; Premium</b><span>Luxe</span></a>
+<a href="#elderberry"><b>Botanical &amp; Intentional</b><span>Elderberry</span></a>
+<a href="#watermelon"><b>Modern &amp; Fresh</b><span>Watermelon</span></a>
+<a href="#sweetpea"><b>Cheerful &amp; Approachable</b><span>Sweet Pea</span></a>
+<a href="#fjord"><b>Clean &amp; Confident</b><span>Fjord</span></a>
+<a href="#vibrant"><b>Bold Expert</b><span>Vibrant</span></a>
+<a href="#margarita"><b>Energetic &amp; Playful</b><span>Pickleball</span></a>
+<a href="#gallery"><b>Simple &amp; Refined</b><span>Gallery — the neutral option</span></a>
+</div>
+
+<div class="quad-head"><h2>Warm and soft</h2></div>
+<p class="quad-meta">Caregiver · Innocent — nurturing, cozy, tender</p>
+<p class="pairing">Type pairing: <b>Fraunces</b> display · <b>Karla</b> body <span style="font-family:'Fraunces',serif;font-style:italic;">— the italic carries the accent voice</span></p>
+
+<div class="board" id="wisteria" style="background:#FEFBF5;color:#372F17;font-family:'Karla',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#61562E;">warm · soft · romantic</p>
+<p class="bname" style="font-family:'Fraunces',serif;font-weight:600;color:#61562E;">Wisteria<span class="tag swap">replaces Sweet</span></p>
+<p class="bvibe" style="color:#71597F;">Quiet Luxury</p>
+<p class="bwords" style="font-family:'Fraunces',serif;">romantic · <em style="color:#71597F;">sunlit</em> · dried-floral</p>
+<p class="bdesc">Cream, bronze, and a soft violet. Feels like a linen dress against a garden wall in late afternoon sun — nothing on the page shouts. For the practitioner who wants to feel established and warm at the same time.</p>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1560707854-fb9a10eeaace?q=80&w=900&auto=format&fit=crop" alt="Smiling woman carrying a baby">
+<img src="https://images.unsplash.com/photo-1583710457367-47de0ea21fef?q=80&w=900&auto=format&fit=crop" alt="Woman in white shirt carrying a baby in soft light">
+<img src="https://images.unsplash.com/photo-1489760176169-fd3d32805239?q=80&w=900&auto=format&fit=crop" alt="Infant feet held gently in a woman's hands">
+</div>
+<p class="photo-note">Photography direction: golden-hour warmth, dried florals and linen, gentle hands, cream backdrops.</p>
+<p class="hexline">#FEFBF5 · #FAF2E6 · #372F17 · #61562E · #71597F · #E0D3E6</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FEFBF5;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm White</p><p class="rhex">#FEFBF5</p><p class="ruse">Primary background, ~80% of the site.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#FAF2E6;"></div><div class="rmeta"><p class="rname">Paper · Cream</p><p class="rhex">#FAF2E6</p><p class="ruse">Section bands, testimonial strips.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#372F17;"></div><div class="rmeta"><p class="rname">Ink · Olive Espresso</p><p class="rhex">#372F17</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#61562E;"></div><div class="rmeta"><p class="rname">Lead · Bronze</p><p class="rhex">#61562E</p><p class="ruse">Headline emphasis, links, buttons. Passes text (7.1:1).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#71597F;"></div><div class="rmeta"><p class="rname">Spice · Soft Violet</p><p class="rhex">#71597F</p><p class="ruse">The friction accent. Passes small text (5.9:1).</p><p class="rtok">--spice</p></div></div>
+<div class="role-card"><div class="chip" style="background:#E0D3E6;"></div><div class="rmeta"><p class="rname">Wash · Lilac</p><p class="rhex">#E0D3E6</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FEFBF5;color:#372F17;">Ink on Base · 12.9 AAA</span>
+<span class="bpair" style="background:#FEFBF5;color:#61562E;">Lead on Base · 7.1 AAA</span>
+<span class="bpair" style="background:#61562E;color:#FEFBF5;border-color:#61562E;">Base on Lead button · 7.1 AAA</span>
+<span class="bpair" style="background:#FEFBF5;color:#71597F;">Spice on Base · 5.9 AA</span>
+<span class="bpair" style="background:#E0D3E6;color:#372F17;">Ink on Wash · 9.3 AAA</span>
+</div>
+<p class="bnote"><b>Notes:</b> the only bronze Lead in the set — it runs colored buttons at AAA. Alternate warm Wash #F8D6C4; apricot #F2B597 decorative only.</p>
+</div>
+</div>
+
+<div class="board" id="sweetpea" style="background:#FDFAF6;color:#3B3134;font-family:'Karla',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#A94850;">warm · soft · fresh</p>
+<p class="bname" style="font-family:'Fraunces',serif;font-weight:600;color:#A94850;">Sweet Pea<span class="tag new">new</span></p>
+<p class="bvibe" style="color:#2E7C93;">Cheerful & Approachable</p>
+<p class="bwords" style="font-family:'Fraunces',serif;">fresh · <em style="color:#2E7C93;">gentle</em> · optimistic</p>
+<p class="bdesc">Rose, lime, and powder blue with a raspberry spine. Feels like the waiting room kids don't mind — a picture-book palette that still signs its name like an adult. The two-audience palette: playful enough for the child in the room, credible enough for the parent writing the check. Made for children's nutrition, speech therapy, family care, and early education. Of the three fresh palettes, this is the gentlest.</p>
+<div class="tiles">
+<div style="background:linear-gradient(160deg,#DB8389 0%,#F8D6DA 100%);"></div>
+<div style="background:linear-gradient(160deg,#DFFDBB 0%,#A5CFDA 100%);"></div>
+<div style="background:linear-gradient(160deg,#A5CFDA 0%,#FDFAF6 100%);"></div>
+</div>
+<p class="photo-note">Photos to be sourced. Direction: soft daylight, garden greens, pastel textiles, fresh produce close-ups, open sky.</p>
+<p class="hexline">#FDFAF6 · #A5CFDA · #3B3134 · #A94850 · #2E7C93 · #DFFDBB</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FDFAF6;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm White</p><p class="rhex">#FDFAF6</p><p class="ruse">Primary background, rose-warmed.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#A5CFDA;"></div><div class="rmeta"><p class="rname">Paper · Powder</p><p class="rhex">#A5CFDA</p><p class="ruse">Full-strength section bands; Ink holds 7.5:1.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#3B3134;"></div><div class="rmeta"><p class="rname">Ink · Plum Charcoal</p><p class="rhex">#3B3134</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#A94850;"></div><div class="rmeta"><p class="rname">Lead · Raspberry</p><p class="rhex">#A94850</p><p class="ruse">Text, links, buttons (5.4:1). Display tint Rose #DB8389 for large headline moments.</p><p class="rtok">--lead / --lead-display</p></div></div>
+<div class="role-card"><div class="chip" style="background:#2E7C93;"></div><div class="rmeta"><p class="rname">Spice · Teal Blue</p><p class="rhex">#2E7C93</p><p class="ruse">The friction accent. Passes small text (4.6:1).</p><p class="rtok">--spice</p></div></div>
+<div class="role-card"><div class="chip" style="background:#DFFDBB;"></div><div class="rmeta"><p class="rname">Wash · Lime</p><p class="rhex">#DFFDBB</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FDFAF6;color:#3B3134;">Ink on Base · 12.0 AAA</span>
+<span class="bpair" style="background:#A5CFDA;color:#3B3134;">Ink on Paper · 7.5 AAA</span>
+<span class="bpair" style="background:#DFFDBB;color:#3B3134;">Ink on Wash · 11.3 AAA</span>
+<span class="bpair" style="background:#FDFAF6;color:#A94850;">Lead on Base · 5.4 AA</span>
+<span class="bpair" style="background:#FDFAF6;color:#2E7C93;">Spice on Base · 4.6 AA</span>
+</div>
+<p class="bnote"><b>Notes:</b> the Farmstand structure — raspberry works, rose #DB8389 displays. The grown-up spine is what lets the pastels stay playful without the site reading childish. The powder Paper works at full strength.</p>
+</div>
+</div>
+
+<div class="board" id="riad" style="background:#FEFCF9;color:#22302E;font-family:'Karla',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#14565B;">warm · soft · earthy</p>
+<p class="bname" style="font-family:'Fraunces',serif;font-weight:600;color:#14565B;">Riad<span class="tag swap">replaces Grounded</span></p>
+<p class="bvibe" style="color:#B56E4C;">Grounded Confidence</p>
+<p class="bwords" style="font-family:'Fraunces',serif;">earthy · <em style="color:#B56E4C;">considered</em> · sunlit</p>
+<p class="bdesc">Clay, deep teal, and warm plaster. Feels like a sunlit courtyard with handmade tile — earthy and sure of itself. For the practitioner whose work is hands-on and rooted, and who wants a site that feels solid and lived in.</p>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1590605095243-072811dbe64c?q=80&w=900&auto=format&fit=crop" alt="Hands holding a freshly thrown clay pot">
+<img src="https://images.unsplash.com/photo-1609881583302-61548332039c?q=80&w=900&auto=format&fit=crop" alt="Person shaping a clay pot at a pottery wheel">
+<img src="https://images.unsplash.com/photo-1577576223085-3eb295cd414f?q=80&w=900&auto=format&fit=crop" alt="Assorted handmade ceramic bowls on a wooden surface">
+</div>
+<p class="photo-note">Photography direction: handmade ceramics, zellige tile, clay walls, warm shadow, courtyard light.</p>
+<p class="hexline">#FEFCF9 · #EAF5EF · #22302E · #14565B · #B56E4C · #EFD7C2</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FEFCF9;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm White</p><p class="rhex">#FEFCF9</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#EAF5EF;"></div><div class="rmeta"><p class="rname">Paper · Mint</p><p class="rhex">#EAF5EF</p><p class="ruse">Section bands. Bolder option #CBEAE1.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#22302E;"></div><div class="rmeta"><p class="rname">Ink · Pine Charcoal</p><p class="rhex">#22302E</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#14565B;"></div><div class="rmeta"><p class="rname">Lead · Deep Teal</p><p class="rhex">#14565B</p><p class="ruse">Text, links, and colored buttons — passes AAA (8.2:1).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#B56E4C;"></div><div class="rmeta"><p class="rname">Spice · Terracotta</p><p class="rhex">#B56E4C</p><p class="ruse">Large and decorative; small text uses #A05836 (5.2:1).</p><p class="rtok">--spice / --spice-text</p></div></div>
+<div class="role-card"><div class="chip" style="background:#EFD7C2;"></div><div class="rmeta"><p class="rname">Wash · Peach</p><p class="rhex">#EFD7C2</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FEFCF9;color:#22302E;">Ink on Base · 13.4 AAA</span>
+<span class="bpair" style="background:#FEFCF9;color:#14565B;">Lead on Base · 8.2 AAA</span>
+<span class="bpair" style="background:#14565B;color:#FEFCF9;border-color:#14565B;">Base on Lead button · 8.2 AAA</span>
+<span class="bpair" style="background:#EFD7C2;color:#22302E;">Ink on Wash · 9.9 AAA</span>
+<span class="bpair" style="background:#FEFCF9;color:#A05836;">Spice small text · 5.2 AA</span>
+</div>
+<p class="bnote"><b>Notes:</b> serves the earthy, handmade client Grounded did — terracotta kept, sage replaced with deep teal for real tension.</p>
+</div>
+</div>
+
+<div class="quad-head"><h2>Warm and bold</h2></div>
+<p class="quad-meta">Hero · Everyman — energizing, grounded, direct</p>
+<p class="pairing">Type pairing: <b>DM Serif Display</b> display · <b>Plus Jakarta Sans</b> body <span style="font-family:'DM Serif Display',serif;font-style:italic;">— the italic carries the accent voice</span></p>
+
+<div class="board" id="farmstand" style="background:#FDFAF2;color:#1B3A2C;font-family:'Plus Jakarta Sans',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#965C08;">warm · bold · harvest</p>
+<p class="bname" style="font-family:'DM Serif Display',serif;color:#965C08;">Farmstand<span class="tag swap">replaces Rich</span></p>
+<p class="bvibe" style="color:#853F65;">Warm & Vibrant</p>
+<p class="bwords" style="font-family:'DM Serif Display',serif;">harvest · <em style="color:#853F65;">hearty</em> · welcoming</p>
+<p class="bdesc">Marigold, plum, and butter over warm ivory. Feels like a market table in September — generous and a little nostalgic. For the practitioner who leads with abundance and wants people to feel fed just by looking.</p>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1511816868748-35a25b1148c0?q=80&w=900&auto=format&fit=crop" alt="Hands holding a teacup beside croissants on a tray">
+<img src="https://images.unsplash.com/photo-1695459003933-4a1b59009355?q=80&w=900&auto=format&fit=crop" alt="Bowl of pumpkin soup with autumn foods">
+<img src="https://images.unsplash.com/photo-1541095441899-5d96a6da10b8?q=80&w=900&auto=format&fit=crop" alt="Bowl of soup near two pumpkins">
+</div>
+<p class="photo-note">Photography direction: market tables, stone fruit and squash, generous plates, late-afternoon sun.</p>
+<p class="hexline">#FDFAF2 · #F2E4EC · #1B3A2C · #965C08 · #853F65 · #F4ECC0</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FDFAF2;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm Ivory</p><p class="rhex">#FDFAF2</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#F2E4EC;"></div><div class="rmeta"><p class="rname">Paper · Plum Blush</p><p class="rhex">#F2E4EC</p><p class="ruse">Section bands, from the Spice family.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#1B3A2C;"></div><div class="rmeta"><p class="rname">Ink · Forest</p><p class="rhex">#1B3A2C</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#965C08;"></div><div class="rmeta"><p class="rname">Lead · Amber</p><p class="rhex">#965C08</p><p class="ruse">Text, links, buttons (5.3:1). Display tint Marigold #DB8D1C for large headline moments.</p><p class="rtok">--lead / --lead-display</p></div></div>
+<div class="role-card"><div class="chip" style="background:#853F65;"></div><div class="rmeta"><p class="rname">Spice · Plum</p><p class="rhex">#853F65</p><p class="ruse">The friction accent — marigold's wheel opposite. Passes AAA (7.0:1).</p><p class="rtok">--spice</p></div></div>
+<div class="role-card"><div class="chip" style="background:#F4ECC0;"></div><div class="rmeta"><p class="rname">Wash · Butter</p><p class="rhex">#F4ECC0</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FDFAF2;color:#1B3A2C;">Ink on Base · 11.9 AAA</span>
+<span class="bpair" style="background:#FDFAF2;color:#965C08;">Lead on Base · 5.3 AA</span>
+<span class="bpair" style="background:#FDFAF2;color:#853F65;">Spice on Base · 7.0 AAA</span>
+<span class="bpair" style="background:#F4ECC0;color:#1B3A2C;">Ink on Wash · 10.4 AAA</span>
+<span class="bpair" style="background:#F2E4EC;color:#1B3A2C;">Ink on Paper · 10.1 AAA</span>
+</div>
+<p class="bnote"><b>Notes:</b> the Rich lineage de-tealed to clear Riad. Marigold #DB8D1C survives as the Lead's large-display tint (never small text).</p>
+</div>
+</div>
+
+<div class="board" id="vibrant" style="background:#FEF7EF;color:#212F58;font-family:'Plus Jakarta Sans',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#BD3B2E;">warm · bold · high energy</p>
+<p class="bname" style="font-family:'DM Serif Display',serif;color:#BD3B2E;">Vibrant<span class="tag keep">retrofitted</span></p>
+<p class="bvibe" style="color:#2C5BAB;">Bold Expert</p>
+<p class="bwords" style="font-family:'DM Serif Display',serif;">lively · <em style="color:#2C5BAB;">confident</em> · bright</p>
+<p class="bdesc">Coral red, cobalt, and marigold. Feels like a strong opinion delivered with a smile. For the practitioner who is the loudest voice in their niche and wants the site to keep up.</p>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=900&auto=format&fit=crop" alt="Woman playfully tossing flour while baking">
+<img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=900&auto=format&fit=crop" alt="Person cooking at a stove with fresh ingredients">
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=900&auto=format&fit=crop" alt="Colorful bowls of fresh salad">
+</div>
+<p class="photo-note">Photography direction: motion and laughter, saturated food color, bold crops, hard daylight.</p>
+<p class="hexline">#FEF7EF · #FBE4DD · #212F58 · #BD3B2E · #2C5BAB · #FBE4B8</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FEF7EF;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm White</p><p class="rhex">#FEF7EF</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#FBE4DD;"></div><div class="rmeta"><p class="rname">Paper · Shell</p><p class="rhex">#FBE4DD</p><p class="ruse">Section bands.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#212F58;"></div><div class="rmeta"><p class="rname">Ink · Navy</p><p class="rhex">#212F58</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#BD3B2E;"></div><div class="rmeta"><p class="rname">Lead · Coral Red</p><p class="rhex">#BD3B2E</p><p class="ruse">Text, links, emphasis. Passes small text (5.2:1).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#2C5BAB;"></div><div class="rmeta"><p class="rname">Spice · Cobalt</p><p class="rhex">#2C5BAB</p><p class="ruse">The friction accent. Passes small text (6.2:1).</p><p class="rtok">--spice</p></div></div>
+<div class="role-card"><div class="chip" style="background:#FBE4B8;"></div><div class="rmeta"><p class="rname">Wash · Marigold Light</p><p class="rhex">#FBE4B8</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FEF7EF;color:#212F58;">Ink on Base · 12.3 AAA</span>
+<span class="bpair" style="background:#FEF7EF;color:#BD3B2E;">Lead on Base · 5.2 AA</span>
+<span class="bpair" style="background:#FEF7EF;color:#2C5BAB;">Spice on Base · 6.2 AA</span>
+<span class="bpair" style="background:#FBE4B8;color:#212F58;">Ink on Wash · 10.5 AAA</span>
+<span class="bpair" style="background:#FBE4DD;color:#212F58;">Ink on Paper · 10.7 AAA</span>
+</div>
+<p class="bnote"><b>Notes:</b> cobalt gives the coral red a genuine cool opponent. Marigold #F2B64A decorative only. Candidate referent rename: Fiesta.</p>
+</div>
+</div>
+
+<div class="board" id="margarita" style="background:#FEFDF4;color:#173931;font-family:'Plus Jakarta Sans',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#2E7D6B;">warm · bold · spirited</p>
+<p class="bname" style="font-family:'DM Serif Display',serif;color:#2E7D6B;">Pickleball<span class="tag new">new</span></p>
+<p class="bvibe" style="color:#F95B36;">Energetic & Playful</p>
+<p class="bwords" style="font-family:'DM Serif Display',serif;">spirited · <em style="color:#F95B36;">social</em> · fresh</p>
+<p class="bdesc">A teal court, a lime ball, a coral kit. Feels like Tuesday-night league with friends — competitive, social, laughing between points. Made for brands that sweat: fitness, health coaching, meal prep, sports nutrition — energy without the gym-bro intensity. Of the three fresh palettes, this is the loudest.</p>
+<div class="tiles">
+<div style="background:linear-gradient(160deg,#3FA48D 0%,#D3E7A2 100%);"></div>
+<div style="background:linear-gradient(160deg,#F95B36 0%,#FDD3C4 100%);"></div>
+<div style="background:linear-gradient(160deg,#D3E7A2 0%,#E7F4EE 100%);"></div>
+</div>
+<p class="photo-note">Photos to be sourced. Direction: courts and kits, motion blur, water bottles and meal prep, hard sunlight, saturated greens.</p>
+<p class="hexline">#FEFDF4 · #E7F4EE · #173931 · #3FA48D · #F95B36 · #D3E7A2</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FEFDF4;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Ivory</p><p class="rhex">#FEFDF4</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#E7F4EE;"></div><div class="rmeta"><p class="rname">Paper · Mint</p><p class="rhex">#E7F4EE</p><p class="ruse">Section bands. Bolder option #CBEAE1.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#173931;"></div><div class="rmeta"><p class="rname">Ink · Deep Pine</p><p class="rhex">#173931</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#3FA48D;"></div><div class="rmeta"><p class="rname">Lead · Teal</p><p class="rhex">#3FA48D</p><p class="ruse">Headline emphasis, large only. Links use #2E7D6B (4.8:1).</p><p class="rtok">--lead / --lead-text</p></div></div>
+<div class="role-card"><div class="chip" style="background:#F95B36;"></div><div class="rmeta"><p class="rname">Spice · Hot Coral</p><p class="rhex">#F95B36</p><p class="ruse">Decorative and large only (3.1:1).</p><p class="rtok">--spice</p></div></div>
+<div class="role-card"><div class="chip" style="background:#D3E7A2;"></div><div class="rmeta"><p class="rname">Wash · Lime</p><p class="rhex">#D3E7A2</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FEFDF4;color:#173931;">Ink on Base · 12.4 AAA</span>
+<span class="bpair" style="background:#173931;color:#FEFDF4;border-color:#173931;">Base on Ink · 12.4 AAA</span>
+<span class="bpair" style="background:#D3E7A2;color:#173931;">Ink on Wash · 9.4 AAA</span>
+<span class="bpair" style="background:#E7F4EE;color:#173931;">Ink on Paper · 11.2 AAA</span>
+<span class="bpair" style="background:#FEFDF4;color:#2E7D6B;">Lead links · 4.8 AA</span>
+</div>
+<p class="bnote"><b>Notes:</b> renamed from Cucumber Margarita — a cocktail referent fought the fitness buyer; the court hands over the same colors. The lime story belongs exclusively to this palette. Lead and Spice are display voices; the Ink button and darkened Lead do the working.</p>
+</div>
+</div>
+
+<div class="quad-head"><h2>Cool and soft</h2></div>
+<p class="quad-meta">Sage — calm, credible, considered</p>
+<p class="pairing">Type pairing: <b>Lora</b> display · <b>Work Sans</b> body <span style="font-family:'Lora',serif;font-style:italic;">— the italic carries the accent voice</span></p>
+
+<div class="board" id="calm" style="background:#FAF7F0;color:#20394F;font-family:'Work Sans',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#3B688A;">cool · soft · coastal</p>
+<p class="bname" style="font-family:'Lora',serif;font-weight:600;color:#3B688A;">Calm<span class="tag keep">retrofitted</span></p>
+<p class="bvibe" style="color:#9A5518;">Professional & Trusted</p>
+<p class="bwords" style="font-family:'Lora',serif;">quiet · <em style="color:#9A5518;">coastal</em> · assured</p>
+<p class="bdesc">Steel blue, sea mist, and a touch of sand. Feels like a deep breath by the water — the steadiest choice in the set, in the best way. For the practitioner whose clients arrive anxious and need to feel in good hands right away.</p>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=900&auto=format&fit=crop" alt="Woman meditating on a dock facing the ocean">
+<img src="https://images.unsplash.com/photo-1522075782449-e45a34f1ddfb?q=80&w=900&auto=format&fit=crop" alt="Woman sitting on a bench overlooking misty mountains">
+<img src="https://images.unsplash.com/photo-1573646985533-85d8a384e020?q=80&w=900&auto=format&fit=crop" alt="Woman doing yoga meditation at the beach">
+</div>
+<p class="photo-note">Photography direction: water and horizon lines, mist, unhurried posture, sandy warmth in the light.</p>
+<p class="hexline">#FAF7F0 · #DCE8EC · #20394F · #3B688A · #C0763B · #F6E3CE</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FAF7F0;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm Ivory</p><p class="rhex">#FAF7F0</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#DCE8EC;"></div><div class="rmeta"><p class="rname">Paper · Mist</p><p class="rhex">#DCE8EC</p><p class="ruse">Section bands.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#20394F;"></div><div class="rmeta"><p class="rname">Ink · Slate Navy</p><p class="rhex">#20394F</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#3B688A;"></div><div class="rmeta"><p class="rname">Lead · Steel Blue</p><p class="rhex">#3B688A</p><p class="ruse">Text, links, emphasis. Passes small text (5.6:1).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#C0763B;"></div><div class="rmeta"><p class="rname">Spice · Sand Amber</p><p class="rhex">#C0763B</p><p class="ruse">Large and decorative; small text uses #9A5518 (5.3:1).</p><p class="rtok">--spice / --spice-text</p></div></div>
+<div class="role-card"><div class="chip" style="background:#F6E3CE;"></div><div class="rmeta"><p class="rname">Wash · Apricot</p><p class="rhex">#F6E3CE</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FAF7F0;color:#20394F;">Ink on Base · 11.2 AAA</span>
+<span class="bpair" style="background:#FAF7F0;color:#3B688A;">Lead on Base · 5.6 AA</span>
+<span class="bpair" style="background:#DCE8EC;color:#20394F;">Ink on Paper · 9.6 AAA</span>
+<span class="bpair" style="background:#F6E3CE;color:#20394F;">Ink on Wash · 9.6 AAA</span>
+<span class="bpair" style="background:#FAF7F0;color:#9A5518;">Spice small text · 5.3 AA</span>
+</div>
+<p class="bnote"><b>Notes:</b> the safe harbor of the set — sandy amber warmth added so it is no longer blues-only. Powder #8FB8C9 decorative. Candidate rename: Sea Salt.</p>
+</div>
+</div>
+
+<div class="board" id="elderberry" style="background:#FCFCF7;color:#33352A;font-family:'Work Sans',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#66734E;">cool · soft · herbal</p>
+<p class="bname" style="font-family:'Lora',serif;font-weight:600;color:#66734E;">Elderberry<span class="tag new">new</span></p>
+<p class="bvibe" style="color:#A34D5E;">Botanical & Intentional</p>
+<p class="bwords" style="font-family:'Lora',serif;">herbal · <em style="color:#A34D5E;">grounded</em> · quiet</p>
+<p class="bdesc">Moss, berry, and soft blush. Feels like an herbalist's studio where every jar is labeled by hand. For the practitioner whose approach is natural and unhurried, with real rigor underneath.</p>
+<div class="tiles">
+<div style="background:linear-gradient(160deg,#66734E 0%,#EBEDE4 100%);"></div>
+<div style="background:linear-gradient(160deg,#A34D5E 0%,#F6E0E4 100%);"></div>
+<div style="background:linear-gradient(160deg,#EBEDE4 0%,#FCFCF7 100%);"></div>
+</div>
+<p class="photo-note">Photos to be sourced. Direction: herb gardens, foraged berries, linen textures, overcast soft light, apothecary calm.</p>
+<p class="hexline">#FCFCF7 · #EBEDE4 · #33352A · #66734E · #A34D5E · #F6E0E4</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FCFCF7;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Green White</p><p class="rhex">#FCFCF7</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#EBEDE4;"></div><div class="rmeta"><p class="rname">Paper · Stone Sage</p><p class="rhex">#EBEDE4</p><p class="ruse">Section bands.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#33352A;"></div><div class="rmeta"><p class="rname">Ink · Deep Olive</p><p class="rhex">#33352A</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#66734E;"></div><div class="rmeta"><p class="rname">Lead · Moss</p><p class="rhex">#66734E</p><p class="ruse">Text, links, emphasis. Passes small text (4.9:1).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#A34D5E;"></div><div class="rmeta"><p class="rname">Spice · Berry</p><p class="rhex">#A34D5E</p><p class="ruse">The friction accent. Passes small text (5.4:1).</p><p class="rtok">--spice</p></div></div>
+<div class="role-card"><div class="chip" style="background:#F6E0E4;"></div><div class="rmeta"><p class="rname">Wash · Blush</p><p class="rhex">#F6E0E4</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FCFCF7;color:#33352A;">Ink on Base · 12.1 AAA</span>
+<span class="bpair" style="background:#FCFCF7;color:#66734E;">Lead on Base · 4.9 AA</span>
+<span class="bpair" style="background:#FCFCF7;color:#A34D5E;">Spice on Base · 5.4 AA</span>
+<span class="bpair" style="background:#F6E0E4;color:#33352A;">Ink on Wash · 9.9 AAA</span>
+<span class="bpair" style="background:#EBEDE4;color:#33352A;">Ink on Paper · 10.6 AAA</span>
+</div>
+<p class="bnote"><b>Notes:</b> both accents pass small-text contrast — no darkened variants needed anywhere. Sage #919A80 decorative only, never text.</p>
+</div>
+</div>
+
+<div class="board" id="provence" style="background:#F9F8F9;color:#221F24;font-family:'Work Sans',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#675370;">cool · soft · romantic</p>
+<p class="bname" style="font-family:'Lora',serif;font-weight:600;color:#675370;">Provence<span class="tag swap">replaces Blush</span></p>
+<p class="bvibe" style="color:#616A4D;">Soft & Thoughtful</p>
+<p class="bwords" style="font-family:'Lora',serif;">romantic · <em style="color:#616A4D;">graceful</em> · lavender-field</p>
+<p class="bdesc">Lavender, limestone, and gray-green herbs. Feels like a slow morning in the south of France — calm, a little romantic, with room to breathe. For the practitioner whose clients need gentleness first and a plan second.</p>
+<div class="photos two">
+<img src="https://images.unsplash.com/photo-1688832331997-0331b0ccffd0?q=80&w=900&auto=format&fit=crop" alt="Woman standing in a field of lavender">
+<img src="https://images.unsplash.com/photo-1761194466962-52d338187614?q=80&w=900&auto=format&fit=crop" alt="Woman in white dress walking through a lavender field">
+</div>
+<p class="photo-note">Photography direction: lavender rows, limestone, gray-green foliage, cool morning light. One more photo to source.</p>
+<p class="hexline">#F9F8F9 · #EEEEE9 · #221F24 · #675370 · #616A4D · #E0D5E6</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#F9F8F9;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Cool White</p><p class="rhex">#F9F8F9</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#EEEEE9;"></div><div class="rmeta"><p class="rname">Paper · Stone</p><p class="rhex">#EEEEE9</p><p class="ruse">Section bands, from the Spice family.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#221F24;"></div><div class="rmeta"><p class="rname">Ink · Plum Black</p><p class="rhex">#221F24</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#675370;"></div><div class="rmeta"><p class="rname">Lead · Violet</p><p class="rhex">#675370</p><p class="ruse">Text, links, emphasis. Passes small text (6.5:1).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#616A4D;"></div><div class="rmeta"><p class="rname">Spice · Moss</p><p class="rhex">#616A4D</p><p class="ruse">The friction accent. Passes small text (5.4:1).</p><p class="rtok">--spice</p></div></div>
+<div class="role-card"><div class="chip" style="background:#E0D5E6;"></div><div class="rmeta"><p class="rname">Wash · Lilac</p><p class="rhex">#E0D5E6</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#F9F8F9;color:#221F24;">Ink on Base · 15.4 AAA</span>
+<span class="bpair" style="background:#F9F8F9;color:#675370;">Lead on Base · 6.5 AA</span>
+<span class="bpair" style="background:#F9F8F9;color:#616A4D;">Spice on Base · 5.4 AA</span>
+<span class="bpair" style="background:#E0D5E6;color:#221F24;">Ink on Wash · 11.3 AAA</span>
+<span class="bpair" style="background:#E0D5E6;color:#675370;">Lead on Wash · 4.9 AA</span>
+</div>
+<p class="bnote"><b>Notes:</b> the romantic-purple client Blush served, with a Lead and Spice that actually pass text. No darkened variants needed.</p>
+</div>
+</div>
+
+<div class="quad-head"><h2>Cool and bold</h2></div>
+<p class="quad-meta">Creator — crisp, confident, editorial</p>
+<p class="pairing">Type pairing: <b>Instrument Serif</b> display · <b>Archivo</b> body <span style="font-family:'Instrument Serif',serif;font-style:italic;">— the italic carries the accent voice</span></p>
+
+<div class="board" id="watermelon" style="background:#FAFCFA;color:#053641;font-family:'Archivo',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#26776A;">cool · bold · crisp</p>
+<p class="bname" style="font-family:'Instrument Serif',serif;color:#26776A;">Watermelon<span class="tag swap">replaces Fresh</span></p>
+<p class="bvibe" style="color:#CE3E59;">Modern & Fresh</p>
+<p class="bwords" style="font-family:'Instrument Serif',serif;">crisp · <em style="color:#CE3E59;">juicy</em> · bright</p>
+<p class="bdesc">Pine green and watermelon pink on cool white. Feels like cut fruit on a clean counter — fresh with a modern edge. Made for the current-generation practice: functional nutrition, modern wellness, the millennial entrepreneur whose brand lives on Instagram as much as on the site. Of the three fresh palettes, this is the sleekest.</p>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?q=80&w=900&auto=format&fit=crop" alt="Smiling woman cooking at a stock pot in a bright kitchen">
+<img src="https://images.unsplash.com/photo-1556911073-a517e752729c?q=80&w=900&auto=format&fit=crop" alt="Woman smiling while cooking">
+<img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=900&auto=format&fit=crop" alt="Fresh vegetable salad in a bowl">
+</div>
+<p class="photo-note">Photography direction: cut fruit, bright kitchens, clean counters, pink-and-green produce, cool daylight.</p>
+<p class="hexline">#FAFCFA · #D4F2E8 · #053641 · #26776A · #CE3E59 · #FADEE3</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FAFCFA;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Cool White</p><p class="rhex">#FAFCFA</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#D4F2E8;"></div><div class="rmeta"><p class="rname">Paper · Mint</p><p class="rhex">#D4F2E8</p><p class="ruse">Section bands.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#053641;"></div><div class="rmeta"><p class="rname">Ink · Petrol</p><p class="rhex">#053641</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#26776A;"></div><div class="rmeta"><p class="rname">Lead · Pine</p><p class="rhex">#26776A</p><p class="ruse">Text, links, emphasis. Passes small text (5.2:1).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#CE3E59;"></div><div class="rmeta"><p class="rname">Spice · Watermelon</p><p class="rhex">#CE3E59</p><p class="ruse">The friction accent. Passes small text (4.6:1).</p><p class="rtok">--spice</p></div></div>
+<div class="role-card"><div class="chip" style="background:#FADEE3;"></div><div class="rmeta"><p class="rname">Wash · Pink</p><p class="rhex">#FADEE3</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FAFCFA;color:#053641;">Ink on Base · 12.7 AAA</span>
+<span class="bpair" style="background:#FAFCFA;color:#26776A;">Lead on Base · 5.2 AA</span>
+<span class="bpair" style="background:#FAFCFA;color:#CE3E59;">Spice on Base · 4.6 AA</span>
+<span class="bpair" style="background:#FADEE3;color:#053641;">Ink on Wash · 10.3 AAA</span>
+<span class="bpair" style="background:#D4F2E8;color:#053641;">Ink on Paper · 11.0 AAA</span>
+</div>
+<p class="bnote"><b>Notes:</b> pink flesh, green rind. Lime #D8E12A and mint #1BB997 decorative only — the lime story belongs to Pickleball.</p>
+</div>
+</div>
+
+<div class="board" id="luxe" style="background:#FAF8F4;color:#2C2238;font-family:'Archivo',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#5D3A63;">cool · bold · premium</p>
+<p class="bname" style="font-family:'Instrument Serif',serif;color:#5D3A63;">Luxe<span class="tag keep">retrofitted</span></p>
+<p class="bvibe" style="color:#7E640C;">Elevated & Premium</p>
+<p class="bwords" style="font-family:'Instrument Serif',serif;">refined · <em style="color:#7E640C;">moody</em> · rare</p>
+<p class="bdesc">Mulberry, antique gold, and pale lilac. Feels like velvet, low light, and a considered pour of wine. For the practitioner with premium pricing who wants the site to say so before a single word is read.</p>
+<div class="photos">
+<img src="https://images.unsplash.com/photo-1636215450237-45e236495794?q=80&w=900&auto=format&fit=crop" alt="Woman standing in a dark moody forest">
+<img src="https://images.unsplash.com/photo-1715558643347-9a6ff81f6c5f?q=80&w=900&auto=format&fit=crop" alt="Woman with long hair in dramatic low light">
+<img src="https://images.unsplash.com/photo-1720022791259-db19373922c6?q=80&w=900&auto=format&fit=crop" alt="Woman in a dark room with her eyes closed">
+</div>
+<p class="photo-note">Photography direction: low key, deep shadow, gold accents, velvet and stone textures.</p>
+<p class="hexline">#FAF8F4 · #EFE9F3 · #2C2238 · #5D3A63 · #C9A227 · #E3D7EC</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FAF8F4;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Bone</p><p class="rhex">#FAF8F4</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#EFE9F3;"></div><div class="rmeta"><p class="rname">Paper · Pale Lilac</p><p class="rhex">#EFE9F3</p><p class="ruse">Section bands, from the Lead family.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#2C2238;"></div><div class="rmeta"><p class="rname">Ink · Ink Plum</p><p class="rhex">#2C2238</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#5D3A63;"></div><div class="rmeta"><p class="rname">Lead · Mulberry</p><p class="rhex">#5D3A63</p><p class="ruse">Text, links, emphasis — the strongest Lead in the set (8.8:1 AAA).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#C9A227;"></div><div class="rmeta"><p class="rname">Spice · Antique Gold</p><p class="rhex">#C9A227</p><p class="ruse">Large and decorative; small text uses #7E640C (5.3:1).</p><p class="rtok">--spice / --spice-text</p></div></div>
+<div class="role-card"><div class="chip" style="background:#E3D7EC;"></div><div class="rmeta"><p class="rname">Wash · Lilac</p><p class="rhex">#E3D7EC</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FAF8F4;color:#2C2238;">Ink on Base · 14.2 AAA</span>
+<span class="bpair" style="background:#FAF8F4;color:#5D3A63;">Lead on Base · 8.8 AAA</span>
+<span class="bpair" style="background:#E3D7EC;color:#2C2238;">Ink on Wash · 10.9 AAA</span>
+<span class="bpair" style="background:#EFE9F3;color:#2C2238;">Ink on Paper · 12.7 AAA</span>
+<span class="bpair" style="background:#FAF8F4;color:#7E640C;">Spice small text · 5.3 AA</span>
+</div>
+<p class="bnote"><b>Notes:</b> the lightest retrofit in the set — mostly cleaning the lilac and warming the Base. Candidate referent rename: Fig.</p>
+</div>
+</div>
+
+<div class="board" id="fjord" style="background:#FCFBF6;color:#1E2A44;font-family:'Archivo',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#354C97;">cool · bold · coastal</p>
+<p class="bname" style="font-family:'Instrument Serif',serif;color:#354C97;">Fjord<span class="tag new">new</span></p>
+<p class="bvibe" style="color:#C74A24;">Clean & Confident</p>
+<p class="bwords" style="font-family:'Instrument Serif',serif;">midnight water · <em style="color:#C74A24;">icy sky</em> · painted boathouses</p>
+<p class="bdesc">Indigo, icy blue, and one hot stroke of persimmon. Feels like cold air and clear thinking. For the practitioner who leads with expertise and wants a site that gets straight to the point.</p>
+<div class="tiles">
+<div style="background:linear-gradient(160deg,#1E2A44 0%,#354C97 100%);"></div>
+<div style="background:linear-gradient(160deg,#BCCEDA 0%,#DCEBF3 100%);"></div>
+<div style="background:linear-gradient(160deg,#D9532B 0%,#F4C4AE 100%);"></div>
+</div>
+<p class="photo-note">Photos to be sourced. Direction: coastlines at dusk, midnight-blue water, nordic interiors, editorial portraits in cool light, one warm painted accent.</p>
+<p class="hexline">#FCFBF6 · #BCCEDA · #1E2A44 · #354C97 · #D9532B · #DCEBF3</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FCFBF6;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Soft White</p><p class="rhex">#FCFBF6</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#BCCEDA;"></div><div class="rmeta"><p class="rname">Paper · Powder Slate</p><p class="rhex">#BCCEDA</p><p class="ruse">Full-strength section bands; Ink holds 7.9:1.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#1E2A44;"></div><div class="rmeta"><p class="rname">Ink · Midnight Slate</p><p class="rhex">#1E2A44</p><p class="ruse">Text and default buttons.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#354C97;"></div><div class="rmeta"><p class="rname">Lead · Indigo</p><p class="rhex">#354C97</p><p class="ruse">Text, links, and colored buttons — passes AAA (7.7:1).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#D9532B;"></div><div class="rmeta"><p class="rname">Spice · Persimmon</p><p class="rhex">#D9532B</p><p class="ruse">Large and decorative; small text uses #C74A24 (4.6:1).</p><p class="rtok">--spice / --spice-text</p></div></div>
+<div class="role-card"><div class="chip" style="background:#DCEBF3;"></div><div class="rmeta"><p class="rname">Wash · Icy Sky</p><p class="rhex">#DCEBF3</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FCFBF6;color:#1E2A44;">Ink on Base · 13.8 AAA</span>
+<span class="bpair" style="background:#FCFBF6;color:#354C97;">Lead on Base · 7.7 AAA</span>
+<span class="bpair" style="background:#354C97;color:#FCFBF6;border-color:#354C97;">Base on Lead button · 7.7 AAA</span>
+<span class="bpair" style="background:#BCCEDA;color:#1E2A44;">Ink on Paper · 8.8 AAA</span>
+<span class="bpair" style="background:#FCFBF6;color:#C74A24;">Spice small text · 4.6 AA</span>
+</div>
+<p class="bnote"><b>Notes:</b> the blue-and-orange pairing that defines cool-bold, with the Lead shifted from peacock to indigo to clear the overlap with Riad. Distinguished from Calm by saturation: saturated indigo vs grayed steel, persimmon vs sand.</p>
+</div>
+</div>
+
+
+<div class="quad-head"><h2>Off the map</h2></div>
+<p class="quad-meta">Temperature-neutral by design — the thirteenth option, outside the quadrant grid</p>
+<p class="pairing">Type pairing: <b>any of the four</b> — with no color doing the talking, typography becomes the personality. Shown here in Fraunces + Karla.</p>
+
+<div class="board" id="gallery" style="background:#FBFAF8;color:#232019;font-family:'Karla',sans-serif;">
+<div class="board-body">
+<p class="blabel" style="color:#4A443C;">neutral · minimal · editorial</p>
+<p class="bname" style="font-family:'Fraunces',serif;font-weight:600;color:#4A443C;">Gallery<span class="tag new">new</span></p>
+<p class="bvibe" style="color:#4E565C;">Simple &amp; Refined</p>
+<p class="bwords" style="font-family:'Fraunces',serif;">quiet · <em style="color:#4E565C;">precise</em> · gallery-white</p>
+<p class="bdesc">Warm white, stone, and graphite black. Feels like a gallery with your work on the walls — the site disappears and the work does the talking. For the practitioner who finds every color too much, whose photography or words carry the brand, and who wants minimal without feeling unfinished.</p>
+<div class="tiles">
+<div style="background:linear-gradient(160deg,#232019 0%,#4A443C 100%);"></div>
+<div style="background:linear-gradient(160deg,#F1F0EC 0%,#FBFAF8 100%);"></div>
+<div style="background:linear-gradient(160deg,#4E565C 0%,#ECE8E0 100%);"></div>
+</div>
+<p class="photo-note">Photos to be sourced. Direction: white walls, museum light, linen and paper textures, strong typography — the client's own imagery supplies all the color.</p>
+<p class="hexline">#FBFAF8 · #F1F0EC · #232019 · #4A443C · #4E565C · #ECE8E0</p>
+<div class="roles">
+<div class="role-card"><div class="chip" style="background:#FBFAF8;border-bottom:1px solid rgba(0,0,0,0.06);"></div><div class="rmeta"><p class="rname">Base · Warm White</p><p class="rhex">#FBFAF8</p><p class="ruse">Primary background.</p><p class="rtok">--base / --bg</p></div></div>
+<div class="role-card"><div class="chip" style="background:#F1F0EC;"></div><div class="rmeta"><p class="rname">Paper · Stone</p><p class="rhex">#F1F0EC</p><p class="ruse">Section bands.</p><p class="rtok">--paper / --bg-alt</p></div></div>
+<div class="role-card"><div class="chip" style="background:#232019;"></div><div class="rmeta"><p class="rname">Ink · Espresso Black</p><p class="rhex">#232019</p><p class="ruse">Text and default buttons. Never pure black — the espresso hue keeps it warm.</p><p class="rtok">--ink / --text / --action</p></div></div>
+<div class="role-card"><div class="chip" style="background:#4A443C;"></div><div class="rmeta"><p class="rname">Lead · Taupe Graphite</p><p class="rhex">#4A443C</p><p class="ruse">Warm-undertone emphasis. Passes AAA (9.2:1).</p><p class="rtok">--lead / --link</p></div></div>
+<div class="role-card"><div class="chip" style="background:#4E565C;"></div><div class="rmeta"><p class="rname">Spice · Steel</p><p class="rhex">#4E565C</p><p class="ruse">Cool-undertone friction — the tension rule at zero saturation. Passes AAA (7.2:1).</p><p class="rtok">--spice</p></div></div>
+<div class="role-card"><div class="chip" style="background:#ECE8E0;"></div><div class="rmeta"><p class="rname">Wash · Bone</p><p class="rhex">#ECE8E0</p><p class="ruse">Highlighter behind key phrases, tags.</p><p class="rtok">--wash</p></div></div>
+</div>
+<div class="bpairs">
+<span class="bpair" style="background:#FBFAF8;color:#232019;">Ink on Base · 15.6 AAA</span>
+<span class="bpair" style="background:#FBFAF8;color:#4A443C;">Lead on Base · 9.2 AAA</span>
+<span class="bpair" style="background:#FBFAF8;color:#4E565C;">Spice on Base · 7.2 AAA</span>
+<span class="bpair" style="background:#ECE8E0;color:#232019;">Ink on Wash · 13.3 AAA</span>
+<span class="bpair" style="background:#F1F0EC;color:#232019;">Ink on Paper · 14.3 AAA</span>
+</div>
+<p class="bnote"><b>Notes:</b> every pairing in the palette is AAA — the monochrome superpower. The tension rule survives as undertone: warm taupe Lead against cool steel Spice. Sits outside the quiz quadrants as the deliberate opt-out; requires strong photography or typography to carry the brand.</p>
+</div>
+</div>
+
+<h2 class="sec">Working rules</h2>
+<p class="sec-sub">These apply to every palette. The role names stay identical across all twelve, so any layout built on the tokens accepts any palette.</p>
+<div class="rules">
+<div class="rule"><h4>Never one hue family</h4><p>Lead and Spice sit on opposite sides of the wheel at roughly equal saturation. The Spice is the color that "shouldn't be there" — it makes the palette feel authored instead of safe.</p></div>
+<div class="rule"><h4>No mud zone</h4><p>Nothing lives at medium saturation and medium lightness. Every color is very light (Base, Paper, Wash), very dark (Ink), or clearly saturated (Lead, Spice).</p></div>
+<div class="rule"><h4>Clean pastels</h4><p>Calm palettes soften their accents, but the pastels stay clean — periwinkle, not dusty lilac. Graying down is not calming, it is dusty.</p></div>
+<div class="rule"><h4>Base carries the temperature</h4><p>Every Base is a near-white with a whisper of the palette's own warmth or coolness. Never pure white, never a shared flat gray.</p></div>
+<div class="rule"><h4>Contrast is a rule, not a hope</h4><p>The default button is Ink with Base text — always passes, always looks expensive. Colored buttons only when the Lead passes 4.5:1; otherwise use the palette's darkened variant.</p></div>
+<div class="rule"><h4>Lead lives in the headline</h4><p>Rather than a colored button, color one word of the headline in Lead. Editorial, expensive, zero contrast risk. The display-only Leads (Rose, Teal, Marigold) exist for exactly this.</p></div>
+<div class="rule"><h4>Referent-first names</h4><p>Palettes are named for real things with inherent color stories — a drink, a place, a plant — not adjectives. The referent hands the Spice over for free and gives clients a name to keep.</p></div>
+<div class="rule"><h4>Ink always has a hue</h4><p>Never pure black. Forest, plum, petrol, olive espresso — the hue keeps dark sections feeling like the brand instead of a void.</p></div>
+</div>
+
+<div class="dodont">
+<div class="dd do"><h4>Do</h4>
+<p>Pair a Lead-colored headline word with Ink body on Base.</p>
+<p>Run testimonial strips and feature bands on Paper.</p>
+<p>Highlight key phrases with the Wash, Ink text on top.</p>
+<p>Make primary buttons Ink; use Lead buttons only where the pairing table allows.</p>
+<p>Use the listed darkened variants for any small Lead or Spice text.</p>
+</div>
+<div class="dd dont"><h4>Don't</h4>
+<p>Set Wash, Paper, or any display-only accent as text on a light background.</p>
+<p>Introduce hues from outside the palette, including retired decoratives.</p>
+<p>Use more than three text colors in one layout.</p>
+<p>Put dark text on a mid-saturation colored button.</p>
+<p>Collapse Base and Paper into one surface — they do different jobs.</p>
+</div>
+</div>
+
+<footer>
+<p>Thirteen palettes (twelve on the map, Gallery off it), each with a client-facing vibe label, six roles, and four proposed type pairings. "Vibe" is used for this layer to keep "personality" reserved for the independent site-personality dial. Photos hotlinked from Unsplash under the Unsplash License; gradient tiles mark the four palettes whose photography is still to be sourced. Type pairings are proposals pending confirmation. Companion documents: wpws-twelve-palettes.html (full reference) and wpws-palette-comparison.html (original vs updated lineage). Ultraviolet (violet and lime, verified) is held in reserve as a possible premium expression. Expansion bench for a future sixteen: no further greens — the band is full — candidates are rust + navy, charcoal + dusty coral, aubergine + copper.</p>
+</footer>
+</div>
+</body>
+</html>
